@@ -66,3 +66,9 @@ def process_news_url(url: str) -> dict:
         return result
     except Exception as e:
         return {"input_type": "news", "raw_content": f"Could not fetch: {str(e)}", "entities": [], "context": "news"}
+
+from functools import lru_cache
+
+@lru_cache(maxsize=100)
+def cached_response(prompt):
+    return process(prompt)

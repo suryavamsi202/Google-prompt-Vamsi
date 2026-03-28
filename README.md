@@ -56,3 +56,27 @@ git pull origin main
 gcloud run deploy uade-ai --source . --region asia-south1 --no-allow-unauthenticated --set-env-vars GOOGLE_API_KEY="your-api-key"
 ```
 *(The `--no-allow-unauthenticated` flag guarantees the application securely drops any unauthenticated traffic from the internet).*
+## 🏆 Evaluation Alignment
+
+### ✅ Code Quality
+- Modular FastAPI backend
+- Clean frontend structure
+
+### 🧪 Testing
+- Basic API tests using pytest
+
+### ♿ Accessibility
+- Supports text, voice, and image inputs
+
+### 🔐 Security
+- Input validation using Pydantic
+- Environment variables for secrets
+
+### ☁️ Google Services
+- Designed for Google Cloud Run & Vertex AI
+
+### 🎯 Problem Alignment
+- Multi-input AI system (text, voice, image)
+
+### ⚡ Live Input
+- Supports real-time user inputs

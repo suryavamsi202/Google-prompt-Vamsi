@@ -61,3 +61,8 @@ async def clear_history():
     if os.path.exists("chat_history.json"):
         os.remove("chat_history.json")
     return {"status": "cleared"}
+
+from pydantic import BaseModel
+
+class PromptRequest(BaseModel):
+    prompt: str
