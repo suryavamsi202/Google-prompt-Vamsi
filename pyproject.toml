@@ -1,0 +1,6 @@
+[tool.poetry.dependencies]
+Google-prompt-Vamsi = {git = "https://github.com/suryavamsi202/Google-prompt-Vamsi.git"}
+[project]
+dependencies = [
+  "Google-prompt-Vamsi @ git+https://github.com/suryavamsi202/Google-prompt-Vamsi.git"
+]

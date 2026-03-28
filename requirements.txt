@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+google-genai
+python-dotenv
+spacy
+SpeechRecognition
+pillow
+python-multipart
+httpx
+pytesseract
+opencv-python-headless
+pandas
+pydantic
+newspaper3k
+lxml[html_clean]
+streamlit
+requests

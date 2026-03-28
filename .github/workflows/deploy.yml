@@ -1,0 +1,34 @@
+name: Deploy Universal AI Bridge to Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: pure-iris-491605-n2
+  REGION: asia-south1
+  SERVICE_NAME: uade-ai
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+
+      - name: Deploy to Cloud Run Securely
+        run: |
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --source . \
+            --region ${{ env.REGION }} \
+            --no-allow-unauthenticated \
+            --set-env-vars GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}

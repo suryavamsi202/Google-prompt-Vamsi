@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-28T13:14:24.111278",
+    "input_type": "text",
+    "context": "general",
+    "input": {
+      "input_type": "text",
+      "raw_content": "what is yu doing\r\n",
+      "entities": [],
+      "keywords": [
+        "yu"
+      ],
+      "context": "general"
+    },
+    "output": {
+      "intent": "Unknown",
+      "urgency": "LOW",
+      "summary": "Could not process",
+      "category": "general",
+      "actions": [],
+      "next_steps": [],
+      "improved_prompt": "",
+      "confidence": 0.0
+    }
+  }
+]
